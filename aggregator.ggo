@@ -1,0 +1,11 @@
+# gengenopt file
+
+package "aggregator"
+version "2011-02-22"
+description "Dynamic community timeline aggregator tool"
+
+option  "persist"    p "membership persistence threshold (in range 0 to 1, or no value to use union of all step communities)" double optional
+option  "length"     l "minimum length (number of time steps) for a dynamic cluster to be deemed persistent (default=2)" int optional
+option  "input"      i "input timeline file" string typestr="FILEPATH" optional
+option  "output"     o "prefix for output files" string typestr="PREFIX" optional
+option  "max"        m "maximum time step to process (by default process all step communities specified)" int optional

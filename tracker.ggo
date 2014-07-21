@@ -1,0 +1,9 @@
+# gengenopt file
+
+package "tracker"
+version "2011-02-22"
+description "Dynamic community tracking tool"
+
+option  "threshold"  t "community matching threshold (in range 0 to 1)" double default="0.1" optional
+option  "output"     o "prefix for output files" string typestr="PREFIX" optional
+option  "death"      d "number of steps after which a dynamic community is declared 'dead'" int default="3" optional

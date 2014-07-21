@@ -1,0 +1,9 @@
+# gengenopt file
+
+package "aggregator_stats"
+version "2011-02-22"
+description "Dynamic community timeline aggregator stats tool"
+
+option  "input"     i "input timeline file" string typestr="FILEPATH" optional
+option  "max"       m "maximum time step to process (by default process all step communities specified)" int optional
+option  "length"    l "minimum length (number of time steps) for a dynamic cluster to be deemed persistent (default=2)" int optional
