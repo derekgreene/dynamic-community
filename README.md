@@ -9,7 +9,7 @@ The Dynamic Community Tracking Tool is a console application written in C++ for 
 The tool takes as its input a series of two or more sets of step communities, produced on individual time step graphs using a standard static community finding algorithm, such as [MOSES](https://sites.google.com/site/aaronmcdaid/moses) or the [Louvain algorithm](http://sites.google.com/site/findcommunities). These step communities can overlapping or non-overlapping. Note that all nodes need be present in consecutive time step graphs, some degree of overlap is sufficient.
 The tool builds dynamic community timelines from sequences of individual step communities, which can be used to chart the evolution of these dynamic communities over time.
 For further details on the algorithm and its applications, please consult the following paper:
-- D.Greene, D.Doyle, and P.Cunningham, "Tracking the evolution of communities in dynamic social networks," in Proc. International Conference on Advances in Social Networks Analysis and Mining (ASONAM"10), 2010. [[PDF]](http://mlg.ucd.ie/files/publications/greene10tracking.pdf)
+- D.Greene, D.Doyle, and P.Cunningham, "Tracking the evolution of communities in dynamic social networks," in Proc. International Conference on Advances in Social Networks Analysis and Mining (ASONAM'10), 2010. [[PDF]](http://mlg.ucd.ie/files/publications/greene10tracking.pdf)
 
 ### Usage
 
