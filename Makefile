@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-O5 -funroll-loops -I.
+CFLAGS=-O3 -funroll-loops -I.
 PREFIX=~/bin
 DEPS = common/clustering.h common/util.h dynamic.h extras.h settings.h 
 OBJ = common/clustering.o common/util.o dynamic.o extras.o  

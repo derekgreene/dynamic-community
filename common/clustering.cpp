@@ -121,20 +121,6 @@ bool is_empty( Cluster &cluster )
 	return cluster.empty();
 }
 
-/**
- * Removes all empty clusters from the specified clustering.
- *
- * @param clustering   the clustering to alter.
- *
- * @return number of removed clsuters.
- */
-int remove_empty_clusters( Clustering &clustering )
-{	
-	int previous = (int)clustering.size();
-	clustering.erase( remove_if( clustering.begin(), clustering.end(), is_empty ), clustering.end() );
-	return previous - (int)clustering.size();
-}
-
 class IsSmall
 {
 	int _min_size;

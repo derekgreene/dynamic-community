@@ -29,7 +29,6 @@ long overlapping_count( const Clustering &clustering );
 long max_cluster_size( const Clustering &clustering );
 int count_empty_clusters( const Clustering &clustering );
 
-int remove_empty_clusters( Clustering &clustering );
 int remove_small_clusters( Clustering &clustering, const int min_size );
 int remove_duplicate_clusters( Clustering &clustering );
 
