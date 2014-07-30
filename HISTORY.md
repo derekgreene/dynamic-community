@@ -1,5 +1,9 @@
 ## Dynamic Community Tracking Tool - Version History
 
+### Version:    2013-07-30
+- Improved command line parsing, more default values.
+- Improved documentation.
+ 
 ### Version:    2013-07-21
 - Moved to GitHub. 
 - Updated documentation.

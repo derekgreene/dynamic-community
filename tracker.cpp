@@ -50,13 +50,16 @@ int main(int argc, char *argv[])
 		cerr << "Error: Invalid matching threshold value: " << matching_threshold << ". Value should be between 0 and 1." << endl;
 		exit(1);
 	}
+	string prefix;
 	if( args_info.output_arg == NULL || strlen(args_info.output_arg) == 0 )
 	{
-		cerr << "Error: No output file prefix specified." << endl;
-		exit(1);
+		prefix = "dynamic";
+	}
+	else
+	{
+		prefix = string(args_info.output_arg);
 	}
 	int death_age = args_info.death_arg;
-	string prefix = string(args_info.output_arg);
 	
 #ifdef MAP_MATCHING
 	cout << "* Applying map-based dynamic tracking (threshold=" << matching_threshold << ")" << endl;

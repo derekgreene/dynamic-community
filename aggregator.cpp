@@ -53,10 +53,14 @@ int main(int argc, char *argv[])
 		cerr << "Error: No input timeline file path specified." << endl;
 		exit(1);
 	}
+	string prefix;
 	if( args_info.output_arg == NULL || strlen(args_info.output_arg) == 0 )
 	{
-		cerr << "Error: No output file prefix specified." << endl;
-		exit(1);
+		prefix = "dynamic";
+	}
+	else
+	{
+		prefix = string(args_info.output_arg);
 	}
 	double persist_threshold = args_info.persist_arg;
 	if( persist_threshold < 0 || persist_threshold > 1 )
@@ -68,7 +72,6 @@ int main(int argc, char *argv[])
 	int user_max_step = args_info.max_arg;
 	int min_persist_length = args_info.length_arg;
 	string timeline_fname = string(args_info.input_arg);
-	string prefix = string(args_info.output_arg);
 
 	/// Read timeline
 	vector<Timeline> timelines;
@@ -99,7 +102,11 @@ int main(int argc, char *argv[])
 	{
 		cerr << "Warning: some step files will be ignored (" << supplied_steps << " > " << max_step << ")" << endl;
 	}
-	if( min_persist_length < 1 || min_persist_length > max_step )
+	if( min_persist_length < 1 )
+	{
+		min_persist_length = 2;
+	}
+	else if( min_persist_length > max_step )
 	{
 		cerr << "Error: invalid minimum persistent timeline length (" << min_persist_length << ")" << endl;
 		return -1;
